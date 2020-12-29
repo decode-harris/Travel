@@ -1,17 +1,23 @@
-/*
-    [ categories ] gallery information array
-*/
-
+// array [ categories ] end
 const categories = [
     
-    // category information objects
+    // [ amsterdam ] information object
     {
-        // html attribute assignments
+        // gallery ID
         'id' : 'ams',
+
+        // gallery Title
         'title' : 'Amsterdam, Netherlands',
 
-        // gallery photo element background image source assignments
-        
+        /*
+            gallery Image source
+
+            x00 - x06 [ 7 photo elements ]
+
+            assign image source to photos element
+            assign image source to fullscreen element
+
+        */
 
         // ams canals
         'x00' : 'https://i.ibb.co/gzWLHxs/IMG20200201143953.jpg',
@@ -27,45 +33,102 @@ const categories = [
 
         // ams town square
         'x04' : 'https://i.ibb.co/427mLjj/IMG20200201142543.jpg',
-
-
+        
         // ams palace
         'x05' : 'https://i.ibb.co/NjHjmPZ/IMG20200201140604.jpg',
 
         // ams sloterdijk
         'x06' : 'https://i.ibb.co/HrXPMTX/IMG20200131115227.jpg',
-
+        
+    },
     
-    },
+    // [ czech ] information object
     {
-        "id" : "cze",
+        'id' : 'cze',
         'title' : 'Prague, Czech Republic',
+
+        /*
+            gallery Image source
+
+            x00 - x06 [ 7 photo elements ]
+
+            assign image source to photos element
+            assign image source to fullscreen element
+
+        */
+
+        // cze old town
+        'x00' : 'https://i.ibb.co/z5GDyt2/IMG20200203114547.jpg',
+
+        // cze old town
+        // <img src="https://i.ibb.co/z5GDyt2/IMG20200203114547.jpg" alt="IMG20200203114547" border="0">
+
+        // cze town center
+        'x01' : 'https://i.ibb.co/bzkJDV4/IMG20200204140833.jpg',
+
+        // cze town center
+        // <img src="https://i.ibb.co/bzkJDV4/IMG20200204140833.jpg" alt="IMG20200204140833" border="0">
+
+        // cze spire
+        'x02' : 'https://i.ibb.co/j3t4c2y/IMG20200203113452.jpg',
+
+        // cze spire
+        // <img src="https://i.ibb.co/j3t4c2y/IMG20200203113452.jpg" alt="IMG20200203113452" border="0">
+
+        // cze river
+        'x03' : 'https://i.ibb.co/2nC3M8J/IMG20200204135836.jpg',
+
+        // cze river
+        // <img src="https://i.ibb.co/2nC3M8J/IMG20200204135836.jpg" alt="IMG20200204135836" border="0">
+
+        // cze 
+        'x04' : 'https://i.ibb.co/5FnzR0x/IMG20200204131557.jpg',
+
+        // cze castle
+        // <img src="https://i.ibb.co/5FnzR0x/IMG20200204131557.jpg" alt="IMG20200204131557" border="0">
+
+        // cze city center
+        'x05' : 'https://i.ibb.co/qxhhn6H/IMG20200203113333.jpg',
+
+        // cze city center
+        // <img src="https://i.ibb.co/qxhhn6H/IMG20200203113333.jpg" alt="IMG20200203113333" border="0">
+
+        // cze organ
+        'x06' : 'https://i.ibb.co/0jSg5nS/IMG20200204132849.jpg',
+
+        // cze organ
+        // <img src="https://i.ibb.co/0jSg5nS/IMG20200204132849.jpg" alt="IMG20200204132849" border="0" />
+
     },
+
+    // [ singapore ] information object
     {
-        "id" : "sin",
+        'id' : 'sin',
         'title' : 'Singapore City, Singapore',
     },
+
+    // [ new zealand ] information object
     {
-        "id" : "nzl",
+        'id' : 'nzl',
         'title' : 'Queenstown, New Zealand',
     },
+
+    // [ germany ] information object
     {
-        "id" : "ger",
+        'id' : 'ger',
         'title' : 'Munich, Germany',
     },
+
+    // [ thailand ] information object
     {
-        "id" : "tha",
+        'id' : 'tha',
         'title' : 'Phuket, Thailand',
     }
     
-];
+]; // array [ categories ] end
 
 // test
 console.log(categories[0].id);
-
-
-
-
 
 // function [ assignments ]
 assignments = () => {
@@ -138,6 +201,22 @@ assignments = () => {
         // append galleryTitle to [ filter ] button container
         filter.appendChild(galleryTitle);
 
+        // photos loop
+        for (i = 0; i < photos.length; i++) {
+            
+            photos[0].style.backgroundImage = 'url(' + categories[1].x00 + ')';
+            photos[1].style.backgroundImage = 'url(' + categories[1].x01 + ')';
+            photos[2].style.backgroundImage = 'url(' + categories[1].x02 + ')';
+            photos[3].style.backgroundImage = 'url(' + categories[1].x03 + ')';
+            photos[4].style.backgroundImage = 'url(' + categories[1].x04 + ')';
+            photos[5].style.backgroundImage = 'url(' + categories[1].x05 + ')';
+            photos[6].style.backgroundImage = 'url(' + categories[1].x06 + ')';
+
+
+            // test
+            console.log('[ IMAGES.JS ] : photos for loop');
+        }
+
     });
 
     sinbtn.addEventListener('click', ()=> {
@@ -151,7 +230,7 @@ assignments = () => {
         // append galleryTitle to [ filter ] button container
         filter.appendChild(galleryTitle);
 
-
+        
 
     });
 
@@ -197,12 +276,7 @@ assignments = () => {
 
     });
 
-
-    
-
-  
-
-}
+} // function [ assignments ] end
 
 // init assignments
 assignments();
