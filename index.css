@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,18 +14,21 @@
     --md: 10%;
     --lg: 20%;
 
+    --font: 'Poppins', sans-serif;
+
+    /* font-family: 'Poppins', sans-serif; */
+
     /* dev borders */
-    --wireframe: 2px solid darkblue;
+    /* --wireframe: 2px solid darkblue;
     --component: 2px solid darkgreen;
-    --debugging: 2px solid darkred;
+    --debugging: 2px solid darkred; */
 
 }
 html, body {
     scroll-behavior: smooth;
 }
 .page {
-    height: 100vh;
-    width: 100%;
+    font-family: var(--font);
 
     /* overflow: hidden; */
 
@@ -33,24 +38,50 @@ html, body {
 
 /* [ container ] */
 .container {
-    
-    
-    
-    
+    /* component props */
+    padding: var(--sm);
     height: 100%;
     width: 100%;
-
-    padding: var(--sm);
     
     /* dev */   
     border: var(--wireframe);
     background: lightcyan;
+}
+
+/* [ filter ] buttons container */
+.filter {
 
     
+    /* display props [ grid ] */
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(28px, auto);
+    
+    /* component props */
+    min-height: 20vh;
+    padding: var(--sm);
+
+    /* dev */
+    border: var(--component);
+}
+.filter button {
+    /* [ filter ] grid placement */
+    grid-column: span 1;
+    grid-row: span 1;
+
+    /* component props */
+    background: transparent;
+    border: 2px solid #000;
+    border-radius: 8px;
+    text-transform: capitalize;
+    padding: calc(var(--sm) / 2);
 
 }
 
+/* [ gallery ] grid container element */
 .gallery {
+    /* display props [ grid ] */
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(2, 1fr);
@@ -58,29 +89,59 @@ html, body {
     position: relative;
     padding: var(--sm);
     
-    background: red;
-
     /* dev */   
     border: var(--component);
 }
+
+/* [ title ] gallery title panel */
+.title {
+    /* [ gallery ] grid placement */
+    grid-column: span 2;
+    grid-row: span 1;
+
+    /* display props [ flex ] */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* dev */
+    border: var(--debugging);
+}
+.title h2 {
+    font-size: 1.45rem;
+    letter-spacing: 0.24rem;
+    text-decoration: underline;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* [ photos ] gallery photo image panel */
 .photos {
+    /* [ gallery ] grid placement */
+    grid-column: span 1;
+    grid-row: span 2;
+
     /* background props */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    /* component props */
+    border-radius: 10px;
     
     /* dev */   
-    border: var(--debugging);
+    /* border: var(--debugging); */
 }
-.photos:nth-child(1),
-.photos:nth-child(4), 
-.photos:nth-child(7) {
-    grid-column: span 2;
-}
-/* .photos:last-child {
-    display: none;
-} */
 
+.photos:nth-child(2),
+.photos:nth-child(5), 
+.photos:nth-child(8) {
+    grid-column: span 2;
+    
+}
+
+/* [ fullscreen ] modal container element */
 .fullscreen {
     /* display props [ flex ] */
     display: flex;
@@ -107,6 +168,4 @@ html, body {
     border-radius: 10px;
     height: 100%;
     width: 100%;
-    /* max-width: 90%;
-    max-height: 90%; */
 }

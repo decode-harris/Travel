@@ -30,25 +30,63 @@ const categories = [
         */
 
         // ams canals
-        'x00' : 'https://i.ibb.co/gzWLHxs/IMG20200201143953.jpg',
+        'x00' : 'https://i.ibb.co/gzWLHxs/ams-canals.jpg',
+        // <img src="https://i.ibb.co/gzWLHxs/ams-canals.jpg" alt="ams-canals" border="0">
 
         // ams lolly shop
-        'x01' : 'https://i.ibb.co/PNFxpgf/IMG20200129111201.jpg',
-
-        // ams alleyway
-        'x02' : 'https://i.ibb.co/Xs7QmgJ/IMG20200129102421.jpg',
+        'x01' : 'https://i.ibb.co/PNFxpgf/ams-lollyshop.jpg',
+        // <img src="https://i.ibb.co/PNFxpgf/ams-lollyshop.jpg" alt="ams-lollyshop" border="0"></img>
 
         // ams bakery
-        'x03' : 'https://i.ibb.co/VtWMvjp/IMG20200202120106.jpg',
+        'x02' : 'https://i.ibb.co/VtWMvjp/ams-bakery.jpg',
+        // <img src="https://i.ibb.co/VtWMvjp/ams-bakery.jpg" alt="ams-bakery" border="0"></img>
+
+        // ams palace
+        'x03' : 'https://i.ibb.co/NjHjmPZ/ams-palace.jpg',
+        // <img src="https://i.ibb.co/NjHjmPZ/ams-palace.jpg" alt="ams-palace" border="0"></img>
 
         // ams town square
-        'x04' : 'https://i.ibb.co/427mLjj/IMG20200201142543.jpg',
+        'x04' : 'https://i.ibb.co/427mLjj/ams-townsquare.jpg',
+        // <img src="https://i.ibb.co/427mLjj/ams-townsquare.jpg" alt="ams-townsquare" border="0"></img>
         
-        // ams palace
-        'x05' : 'https://i.ibb.co/NjHjmPZ/IMG20200201140604.jpg',
+        // ams sloterdijk
+        'x05' : 'https://i.ibb.co/HrXPMTX/ams-sloterdijk.jpg',
+        // <img src="https://i.ibb.co/HrXPMTX/ams-sloterdijk.jpg" alt="ams-sloterdijk" border="0"></img>
+
+        // ams laneway
+        'x06' : 'https://i.ibb.co/Xs7QmgJ/ams-laneway.jpg',
+        // <img src="https://i.ibb.co/Xs7QmgJ/ams-laneway.jpg" alt="ams-laneway" border="0"></img>
+
+        /*
+            gallery image information
+
+            x00_info - x06_info [ 7 description elements ]
+
+            assign image description to photos panel
+            assign image description to fullscreen element
+
+        */
+
+        // ams canals info
+        'x00_info' : 'the canals',
+
+        // ams lolly info
+        'x01_info' : 'jamim lollyshop',
+
+        // ams bakery info
+        'x02_info' : 'speciality bakery',
+
+        // ams palace info
+        'x03_info' : 'grand palace',
+
+        // ams town center info
+        'x04_info' : 'town center',
 
         // ams sloterdijk
-        'x06' : 'https://i.ibb.co/HrXPMTX/IMG20200131115227.jpg',
+        'x05_info' : 'sloterdijk',
+
+        // ams laneways
+        'x06_info' : 'the laneways',
         
     },
     
@@ -71,47 +109,33 @@ const categories = [
         */
 
         // cze old town
-        'x00' : 'https://i.ibb.co/z5GDyt2/IMG20200203114547.jpg',
-
-        // cze old town
-        // <img src="https://i.ibb.co/z5GDyt2/IMG20200203114547.jpg" alt="IMG20200203114547" border="0">
-
+        'x00' : 'https://i.ibb.co/z5GDyt2/cze-oldtown.jpg',
+        // <img src="https://i.ibb.co/z5GDyt2/cze-oldtown.jpg" alt="cze-oldtown" border="0">
+        
         // cze town center
-        'x01' : 'https://i.ibb.co/bzkJDV4/IMG20200204140833.jpg',
-
-        // cze town center
-        // <img src="https://i.ibb.co/bzkJDV4/IMG20200204140833.jpg" alt="IMG20200204140833" border="0">
+        'x01' : 'https://i.ibb.co/bzkJDV4/cze-towncenter.jpg',
+        // <img src="https://i.ibb.co/bzkJDV4/cze-towncenter.jpg" alt="cze-towncenter" border="0"></img>
 
         // cze spire
-        'x02' : 'https://i.ibb.co/j3t4c2y/IMG20200203113452.jpg',
-
-        // cze spire
-        // <img src="https://i.ibb.co/j3t4c2y/IMG20200203113452.jpg" alt="IMG20200203113452" border="0">
+        'x02' : 'https://i.ibb.co/j3t4c2y/cze-spire.jpg',
+        // <img src="https://i.ibb.co/j3t4c2y/cze-spire.jpg" alt="cze-spire" border="0"></img>
 
         // cze river
-        'x03' : 'https://i.ibb.co/2nC3M8J/IMG20200204135836.jpg',
-
-        // cze river
-        // <img src="https://i.ibb.co/2nC3M8J/IMG20200204135836.jpg" alt="IMG20200204135836" border="0">
-
-        // cze 
-        'x04' : 'https://i.ibb.co/5FnzR0x/IMG20200204131557.jpg',
+        'x03' : 'https://i.ibb.co/2nC3M8J/cze-river.jpg',
+        // <img src="https://i.ibb.co/2nC3M8J/cze-river.jpg" alt="cze-river" border="0"></img>
 
         // cze castle
-        // <img src="https://i.ibb.co/5FnzR0x/IMG20200204131557.jpg" alt="IMG20200204131557" border="0">
+        'x04' : 'https://i.ibb.co/5FnzR0x/cze-castle.jpg',
+        // <img src="https://i.ibb.co/5FnzR0x/cze-castle.jpg" alt="cze-castle" border="0"></img>
 
         // cze city center
-        'x05' : 'https://i.ibb.co/qxhhn6H/IMG20200203113333.jpg',
-
-        // cze city center
-        // <img src="https://i.ibb.co/qxhhn6H/IMG20200203113333.jpg" alt="IMG20200203113333" border="0">
+        'x05' : 'https://i.ibb.co/qxhhn6H/cze-citycenter.jpg',
+        // <img src="https://i.ibb.co/qxhhn6H/cze-citycenter.jpg" alt="cze-citycenter" border="0"></img>
 
         // cze organ
-        'x06' : 'https://i.ibb.co/0jSg5nS/IMG20200204132849.jpg',
-
-        // cze organ
-        // <img src="https://i.ibb.co/0jSg5nS/IMG20200204132849.jpg" alt="IMG20200204132849" border="0" />
-
+        'x06' : 'https://i.ibb.co/0jSg5nS/cze-organ.jpg',
+        // <img src="https://i.ibb.co/0jSg5nS/cze-organ.jpg" alt="cze-organ" border="0"></img>
+    
     },
 
     // [ germany ] information object [ node 2 ]
@@ -133,37 +157,32 @@ const categories = [
         */
 
         // ger beer
-        'x00' : '',
-
+        'x00' : 'https://i.ibb.co/zFkPzCz/ger-beer.jpg',
+        // <img src="https://i.ibb.co/zFkPzCz/ger-beer.jpg" alt="ger-beer" border="0">
         
-
         // ger pub
-        'x01' : '',
-
+        'x01' : 'https://i.ibb.co/JQVyNyR/ger-pub.jpg',
+        // <img src="https://i.ibb.co/JQVyNyR/ger-pub.jpg" alt="ger-pub" border="0">
         
-
         // ger center
-        'x02' : '',
-
+        'x02' : 'https://i.ibb.co/myk8zDz/ger-center.jpg',
+        // <img src="https://i.ibb.co/myk8zDz/ger-center.jpg" alt="ger-center" border="0">
         
+        // ger castle
+        'x03' : 'https://i.ibb.co/HpVmtjP/ger-castle.jpg',
+        // <img src="https://i.ibb.co/HpVmtjP/ger-castle.jpg" alt="ger-castle" border="0">
 
         // ger city
-        'x03' : '',
-
+        'x04' : 'https://i.ibb.co/YDkrb7c/ger-city.jpg',
+        // <img src="https://i.ibb.co/YDkrb7c/ger-city.jpg" alt="ger-city" border="0"></img>
         
-
-        // ger castle
-        'x04' : '',
-
-        
-
         // ger arch
-        'x05' : '',
-
+        'x05' : 'https://i.ibb.co/wSmpfnp/ger-architecture.jpg',
+        // <img src="https://i.ibb.co/wSmpfnp/ger-architecture.jpg" alt="ger-architecture" border="0">
         
-
         // ger snow
-        'x06' : '',
+        'x06' : 'https://i.ibb.co/NVvjkyy/ger-snow.jpg',
+        // <img src="https://i.ibb.co/NVvjkyy/ger-snow.jpg" alt="ger-snow" border="0">
 
         
     },
@@ -327,8 +346,8 @@ assignments = () => {
     // galleryCategory variable
     let galleryCategory;
 
-    // filter button container selector
-    let filter = document.querySelector('.filter');
+    // title container selector
+    let title = document.querySelector('.title');
 
     // gallery title creator
     let galleryTitle = document.createElement('h2');
@@ -340,17 +359,16 @@ assignments = () => {
     let amsbtn = document.querySelector('#amsbtn');
     let czebtn = document.querySelector('#czebtn');
     let gerbtn = document.querySelector('#gerbtn');
-
     let sinbtn = document.querySelector('#sinbtn');
     let thabtn = document.querySelector('#thabtn');
-
     let nzlbtn = document.querySelector('#nzlbtn');
-    // let melbtn = document.querySelector('#melbtn');
-    
     
 
     // gallery photos all selector
     let photos = document.querySelectorAll('.photos');
+
+    // photos description panel
+    let photosDescription = document.createElement('p');
 
     // event [ amsbtn ] : display gallery data
     amsbtn.addEventListener('click', ()=> {
@@ -362,11 +380,14 @@ assignments = () => {
         galleryTitle.innerHTML = categories[0].title;
 
         // append galleryTitle to [ filter ] button container
-        filter.appendChild(galleryTitle);
+        title.appendChild(galleryTitle);
 
         // photos loop
         for (i = 0; i < photos.length; i++) {
-            
+
+            photos[i].appendChild(photosDescription);
+
+            // assign a background image to the gallery photo components
             photos[0].style.backgroundImage = 'url(' + categories[0].x00 + ')';
             photos[1].style.backgroundImage = 'url(' + categories[0].x01 + ')';
             photos[2].style.backgroundImage = 'url(' + categories[0].x02 + ')';
@@ -375,9 +396,10 @@ assignments = () => {
             photos[5].style.backgroundImage = 'url(' + categories[0].x05 + ')';
             photos[6].style.backgroundImage = 'url(' + categories[0].x06 + ')';
 
-
+            // photos[0].photosDescription.innerHTML = '(' + categories[0].x00_info + ')';
+            
             // test
-            console.log('[ IMAGES.JS ] : photos for loop');
+            console.log('amsterdam gallery [ assigned ]');
         }
 
     });
@@ -391,12 +413,13 @@ assignments = () => {
         // assign [ galleryTitle] to categoryies array node [ 1 ] title
         galleryTitle.innerHTML = categories[1].title;
         
-        // append galleryTitle to [ filter ] button container
-        filter.appendChild(galleryTitle);
+        // append galleryTitle to [ title ] button container
+        title.appendChild(galleryTitle);
 
         // photos loop
         for (i = 0; i < photos.length; i++) {
             
+            // assign a background image to the gallery photo components
             photos[0].style.backgroundImage = 'url(' + categories[1].x00 + ')';
             photos[1].style.backgroundImage = 'url(' + categories[1].x01 + ')';
             photos[2].style.backgroundImage = 'url(' + categories[1].x02 + ')';
@@ -407,7 +430,7 @@ assignments = () => {
 
 
             // test
-            console.log('[ IMAGES.JS ] : photos for loop');
+            console.log('czech gallery [ assigned ]');
         }
 
     });
@@ -420,12 +443,13 @@ assignments = () => {
         // assign [ galleryTitle] to categoryies array node [ 2 ] title
         galleryTitle.innerHTML = categories[2].title;
         
-        // append galleryTitle to [ filter ] button container
-        filter.appendChild(galleryTitle);
+        // append galleryTitle to [ title ] button container
+        title.appendChild(galleryTitle);
 
         // photos loop
         for (i = 0; i < photos.length; i++) {
             
+            // assign a background image to the gallery photo components
             photos[0].style.backgroundImage = 'url(' + categories[2].x00 + ')';
             photos[1].style.backgroundImage = 'url(' + categories[2].x01 + ')';
             photos[2].style.backgroundImage = 'url(' + categories[2].x02 + ')';
@@ -434,13 +458,10 @@ assignments = () => {
             photos[5].style.backgroundImage = 'url(' + categories[2].x05 + ')';
             photos[6].style.backgroundImage = 'url(' + categories[2].x06 + ')';
 
-
             // test
-            console.log('[ IMAGES.JS ] : photos for loop');
+            console.log('germany gallery [ assigned ]');
         }
-
-        
-
+    
     });
 
     sinbtn.addEventListener('click', ()=> {
@@ -451,12 +472,13 @@ assignments = () => {
         // assign [ galleryTitle] to categoryies array node [ 3 ] title
         galleryTitle.innerHTML = categories[3].title;
         
-        // append galleryTitle to [ filter ] button container
-        filter.appendChild(galleryTitle);
+        // append galleryTitle to [ title ] button container
+        title.appendChild(galleryTitle);
 
         // photos loop
         for (i = 0; i < photos.length; i++) {
             
+            // assign a background image to the gallery photo components
             photos[0].style.backgroundImage = 'url(' + categories[3].x00 + ')';
             photos[1].style.backgroundImage = 'url(' + categories[3].x01 + ')';
             photos[2].style.backgroundImage = 'url(' + categories[3].x02 + ')';
@@ -465,9 +487,8 @@ assignments = () => {
             photos[5].style.backgroundImage = 'url(' + categories[3].x05 + ')';
             photos[6].style.backgroundImage = 'url(' + categories[3].x06 + ')';
 
-
             // test
-            console.log('[ IMAGES.JS ] : photos for loop');
+            console.log('singapore gallery [ assigned ]');
         }
 
     });
@@ -480,12 +501,13 @@ assignments = () => {
         // assign [ galleryTitle] to categoryies array node [ 4 ] title
         galleryTitle.innerHTML = categories[4].title;
         
-        // append galleryTitle to [ filter ] button container
-        filter.appendChild(galleryTitle);
+        // append galleryTitle to [ title ] button container
+        title.appendChild(galleryTitle);
 
         // photos loop
         for (i = 0; i < photos.length; i++) {
             
+            // assign a background image to the gallery photo components
             photos[0].style.backgroundImage = 'url(' + categories[4].x00 + ')';
             photos[1].style.backgroundImage = 'url(' + categories[4].x01 + ')';
             photos[2].style.backgroundImage = 'url(' + categories[4].x02 + ')';
@@ -493,10 +515,9 @@ assignments = () => {
             photos[4].style.backgroundImage = 'url(' + categories[4].x04 + ')';
             photos[5].style.backgroundImage = 'url(' + categories[4].x05 + ')';
             photos[6].style.backgroundImage = 'url(' + categories[4].x06 + ')';
-
-
+            
             // test
-            console.log('[ IMAGES.JS ] : photos for loop');
+            console.log('thailand gallery [ assigned ]');
         }
 
     });
@@ -509,12 +530,13 @@ assignments = () => {
         // assign [ galleryTitle] to categoryies array node [ 5 ] title
         galleryTitle.innerHTML = categories[5].title;
         
-        // append galleryTitle to [ filter ] button container
-        filter.appendChild(galleryTitle);
+        // append galleryTitle to [ title ] button container
+        title.appendChild(galleryTitle);
 
         // photos loop
         for (i = 0; i < photos.length; i++) {
             
+            // assign a background image to the gallery photo components
             photos[0].style.backgroundImage = 'url(' + categories[5].x00 + ')';
             photos[1].style.backgroundImage = 'url(' + categories[5].x01 + ')';
             photos[2].style.backgroundImage = 'url(' + categories[5].x02 + ')';
@@ -522,10 +544,9 @@ assignments = () => {
             photos[4].style.backgroundImage = 'url(' + categories[5].x04 + ')';
             photos[5].style.backgroundImage = 'url(' + categories[5].x05 + ')';
             photos[6].style.backgroundImage = 'url(' + categories[5].x06 + ')';
-
-
+            
             // test
-            console.log('[ IMAGES.JS ] : photos for loop');
+            console.log('newzealand gallery [ assigned ]');
         }
 
         // test
