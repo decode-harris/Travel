@@ -6,8 +6,14 @@ const categories = [
 
         n0 - n5 [ 6 album data sources ]
 
-        assign gallery id to object id
-        assign title inner html to object title
+        assign data to html [ attached functions ] : assignments();
+
+        // output
+
+            assigns gallery id to object id
+            assigns title value to title element
+            assigns hidden info to info element on desktop
+            assigns x00 - x06 image sources to photo elements
 
     */
 
@@ -16,8 +22,14 @@ const categories = [
         // gallery ID
         'id' : 'ams',
 
-        // gallery Title
-        'title' : 'Amsterdam, Netherlands',
+        // gallery title
+        'title' : 'Amsterdam',
+
+        // gallery tagline
+        'tag' : 'capital of the netherlands',
+
+        // destination info
+        'info' : 'Amsterdam is the Netherlands’ capital, known for its artistic heritage, elaborate canal system and narrow houses with gabled facades, legacies of the city’s 17th-century Golden Age',
 
         /*
             gallery Image source
@@ -94,9 +106,15 @@ const categories = [
     {
         // gallery ID
         'id' : 'cze',
-
+        
         // gallery Title
-        'title' : 'Prague, Czech Republic',
+        'title' : 'Prague',
+        
+        // destination tagline
+        'tag' : 'Capital of the Czech Republic',
+        
+        // destination info
+        'info' : `Prague, Nicknamed “the City of a Hundred Spires,” it's known for its Old Town Square, the heart of its historic core, with colorful baroque buildings, Gothic churches and the medieval Astronomical Clock`,
 
         /*
             gallery Image source
@@ -143,8 +161,14 @@ const categories = [
         // gallery ID
         'id' : 'ger',
 
-        // gallery Title
-        'title' : 'Munich, Germany',
+        // gallery title
+        'title' : 'Munich',
+
+        // destination tagline
+        'tag' : 'Bavaria’s capital in Germany',
+        
+        // destination info
+        'info' : 'Munich is home to centuries-old buildings and numerous museums. The city is known for its annual Oktoberfest celebration and its beer halls, including the famed Hofbräuhaus',
 
         /*
             gallery Image source
@@ -193,7 +217,15 @@ const categories = [
         'id' : 'sin',
 
         // gallery Title
-        'title' : 'Singapore City, Singapore',
+        'title' : 'Singapore ',
+
+        // destination tag
+        'tag' : 'officially the Republic of Singapore',
+
+        // destination info
+        'info' : `Though physically small, Singapore is an economic giant. It has been Southeast Asia's most modern city for over a century. The city blends Malay, Chinese, Arab, Indian and English cultures and religions.`,
+
+        
 
         /*
             gallery Image source
@@ -242,7 +274,13 @@ const categories = [
         'id' : 'tha',
 
         // gallery Title
-        'title' : 'Phuket, Thailand',
+        'title' : 'Phuket',
+
+        // destination tag
+        'tag' : 'Biggest Island of Thailand',
+
+        // destination info
+        'info' : `Phuket, a rainforested, mountainous island in the Andaman Sea, has some of Thailand’s most popular beaches, mainly situated along the clear waters of the western shore. The island is home to many high-end seaside resorts, spas and restaurants.`,
 
         /*
             gallery Image source
@@ -290,7 +328,13 @@ const categories = [
         'id' : 'nzl',
 
         // gallery Title
-        'title' : 'Queenstown, New Zealand',
+        'title' : 'Queenstown',
+        
+        // destination tag
+        'tag' : 'South Island, New Zealand',
+
+        // destination info
+        'info' : `Queenstown, New Zealand, sits on the shores of the South Island’s Lake Wakatipu, set against the dramatic Southern Alps. Renowned for adventure sports, it’s also a base for exploring the region’s vineyards and historic mining towns.`,
 
         /*
             gallery Image source
@@ -336,225 +380,3 @@ const categories = [
 
 // test
 console.log(categories[0].id);
-
-// function [ assignments ]
-assignments = () => {
-
-    // main gallery component
-    const gallery = document.querySelector('.gallery');
-    
-    // galleryCategory variable
-    let galleryCategory;
-
-    // title container selector
-    let title = document.querySelector('.title');
-
-    // gallery title creator
-    let galleryTitle = document.createElement('h2');
-
-    // loop iterator
-    let i;
-    
-    // gallery button selectors
-    let amsbtn = document.querySelector('#amsbtn');
-    let czebtn = document.querySelector('#czebtn');
-    let gerbtn = document.querySelector('#gerbtn');
-    let sinbtn = document.querySelector('#sinbtn');
-    let thabtn = document.querySelector('#thabtn');
-    let nzlbtn = document.querySelector('#nzlbtn');
-    
-
-    // gallery photos all selector
-    let photos = document.querySelectorAll('.photos');
-
-    // photos description panel
-    let photosDescription = document.createElement('p');
-
-    // event [ amsbtn ] : display gallery data
-    amsbtn.addEventListener('click', ()=> {
-
-        // assign [ galleryCategory ] to categories array node [ 0 ] ID
-        galleryCategory = gallery.setAttribute('id', categories[0].id);
-
-        // assign [ galleryTitle] to categoryies array node [ 0 ] title
-        galleryTitle.innerHTML = categories[0].title;
-
-        // append galleryTitle to [ filter ] button container
-        title.appendChild(galleryTitle);
-
-        // photos loop
-        for (i = 0; i < photos.length; i++) {
-
-            photos[i].appendChild(photosDescription);
-
-            // assign a background image to the gallery photo components
-            photos[0].style.backgroundImage = 'url(' + categories[0].x00 + ')';
-            photos[1].style.backgroundImage = 'url(' + categories[0].x01 + ')';
-            photos[2].style.backgroundImage = 'url(' + categories[0].x02 + ')';
-            photos[3].style.backgroundImage = 'url(' + categories[0].x03 + ')';
-            photos[4].style.backgroundImage = 'url(' + categories[0].x04 + ')';
-            photos[5].style.backgroundImage = 'url(' + categories[0].x05 + ')';
-            photos[6].style.backgroundImage = 'url(' + categories[0].x06 + ')';
-
-            // photos[0].photosDescription.innerHTML = '(' + categories[0].x00_info + ')';
-            
-            // test
-            console.log('amsterdam gallery [ assigned ]');
-        }
-
-    });
-
-    // event [ czebtn ] : display gallery data
-    czebtn.addEventListener('click', ()=> {
-
-        // assign [ galleryCategory ] to categories array node [ 1 ] ID
-        galleryCategory = gallery.setAttribute('id', categories[1].id);
-
-        // assign [ galleryTitle] to categoryies array node [ 1 ] title
-        galleryTitle.innerHTML = categories[1].title;
-        
-        // append galleryTitle to [ title ] button container
-        title.appendChild(galleryTitle);
-
-        // photos loop
-        for (i = 0; i < photos.length; i++) {
-            
-            // assign a background image to the gallery photo components
-            photos[0].style.backgroundImage = 'url(' + categories[1].x00 + ')';
-            photos[1].style.backgroundImage = 'url(' + categories[1].x01 + ')';
-            photos[2].style.backgroundImage = 'url(' + categories[1].x02 + ')';
-            photos[3].style.backgroundImage = 'url(' + categories[1].x03 + ')';
-            photos[4].style.backgroundImage = 'url(' + categories[1].x04 + ')';
-            photos[5].style.backgroundImage = 'url(' + categories[1].x05 + ')';
-            photos[6].style.backgroundImage = 'url(' + categories[1].x06 + ')';
-
-
-            // test
-            console.log('czech gallery [ assigned ]');
-        }
-
-    });
-
-    gerbtn.addEventListener('click', ()=> {
-
-        // assign [ galleryCategory ] to categories array node [ 2 ] ID
-        galleryCategory = gallery.setAttribute('id', categories[2].id);
-
-        // assign [ galleryTitle] to categoryies array node [ 2 ] title
-        galleryTitle.innerHTML = categories[2].title;
-        
-        // append galleryTitle to [ title ] button container
-        title.appendChild(galleryTitle);
-
-        // photos loop
-        for (i = 0; i < photos.length; i++) {
-            
-            // assign a background image to the gallery photo components
-            photos[0].style.backgroundImage = 'url(' + categories[2].x00 + ')';
-            photos[1].style.backgroundImage = 'url(' + categories[2].x01 + ')';
-            photos[2].style.backgroundImage = 'url(' + categories[2].x02 + ')';
-            photos[3].style.backgroundImage = 'url(' + categories[2].x03 + ')';
-            photos[4].style.backgroundImage = 'url(' + categories[2].x04 + ')';
-            photos[5].style.backgroundImage = 'url(' + categories[2].x05 + ')';
-            photos[6].style.backgroundImage = 'url(' + categories[2].x06 + ')';
-
-            // test
-            console.log('germany gallery [ assigned ]');
-        }
-    
-    });
-
-    sinbtn.addEventListener('click', ()=> {
-
-        // assign [ galleryCategory ] to categories array node [ 3 ] ID
-        galleryCategory = gallery.setAttribute('id', categories[3].id);
-
-        // assign [ galleryTitle] to categoryies array node [ 3 ] title
-        galleryTitle.innerHTML = categories[3].title;
-        
-        // append galleryTitle to [ title ] button container
-        title.appendChild(galleryTitle);
-
-        // photos loop
-        for (i = 0; i < photos.length; i++) {
-            
-            // assign a background image to the gallery photo components
-            photos[0].style.backgroundImage = 'url(' + categories[3].x00 + ')';
-            photos[1].style.backgroundImage = 'url(' + categories[3].x01 + ')';
-            photos[2].style.backgroundImage = 'url(' + categories[3].x02 + ')';
-            photos[3].style.backgroundImage = 'url(' + categories[3].x03 + ')';
-            photos[4].style.backgroundImage = 'url(' + categories[3].x04 + ')';
-            photos[5].style.backgroundImage = 'url(' + categories[3].x05 + ')';
-            photos[6].style.backgroundImage = 'url(' + categories[3].x06 + ')';
-
-            // test
-            console.log('singapore gallery [ assigned ]');
-        }
-
-    });
-
-    thabtn.addEventListener('click', ()=> {
-
-        // assign [ galleryCategory ] to categories array node [ 4 ] ID
-        galleryCategory = gallery.setAttribute('id', categories[4].id);
-
-        // assign [ galleryTitle] to categoryies array node [ 4 ] title
-        galleryTitle.innerHTML = categories[4].title;
-        
-        // append galleryTitle to [ title ] button container
-        title.appendChild(galleryTitle);
-
-        // photos loop
-        for (i = 0; i < photos.length; i++) {
-            
-            // assign a background image to the gallery photo components
-            photos[0].style.backgroundImage = 'url(' + categories[4].x00 + ')';
-            photos[1].style.backgroundImage = 'url(' + categories[4].x01 + ')';
-            photos[2].style.backgroundImage = 'url(' + categories[4].x02 + ')';
-            photos[3].style.backgroundImage = 'url(' + categories[4].x03 + ')';
-            photos[4].style.backgroundImage = 'url(' + categories[4].x04 + ')';
-            photos[5].style.backgroundImage = 'url(' + categories[4].x05 + ')';
-            photos[6].style.backgroundImage = 'url(' + categories[4].x06 + ')';
-            
-            // test
-            console.log('thailand gallery [ assigned ]');
-        }
-
-    });
-
-    nzlbtn.addEventListener('click', ()=> {
-
-        // assign [ galleryCategory ] to categories array node [ 5 ] ID
-        galleryCategory = gallery.setAttribute('id', categories[5].id);
-
-        // assign [ galleryTitle] to categoryies array node [ 5 ] title
-        galleryTitle.innerHTML = categories[5].title;
-        
-        // append galleryTitle to [ title ] button container
-        title.appendChild(galleryTitle);
-
-        // photos loop
-        for (i = 0; i < photos.length; i++) {
-            
-            // assign a background image to the gallery photo components
-            photos[0].style.backgroundImage = 'url(' + categories[5].x00 + ')';
-            photos[1].style.backgroundImage = 'url(' + categories[5].x01 + ')';
-            photos[2].style.backgroundImage = 'url(' + categories[5].x02 + ')';
-            photos[3].style.backgroundImage = 'url(' + categories[5].x03 + ')';
-            photos[4].style.backgroundImage = 'url(' + categories[5].x04 + ')';
-            photos[5].style.backgroundImage = 'url(' + categories[5].x05 + ')';
-            photos[6].style.backgroundImage = 'url(' + categories[5].x06 + ')';
-            
-            // test
-            console.log('newzealand gallery [ assigned ]');
-        }
-
-        // test
-        console.log(gallery.id);
-
-    });
-
-} // function [ assignments ] end
-
-// init assignments
-assignments();
