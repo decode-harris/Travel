@@ -29,7 +29,7 @@ const categories = [
         'tag' : 'capital of the netherlands',
 
         // destination info
-        'info' : 'Amsterdam is the Netherlands’ capital, known for its artistic heritage, elaborate canal system and narrow houses with gabled facades, legacies of the city’s 17th-century Golden Age',
+        'info' : 'Amsterdam is the Netherlands’ capital, known for its artistic heritage, elaborate canal system and narrow houses with gabled facades.',
 
         /*
             gallery Image source
@@ -114,7 +114,7 @@ const categories = [
         'tag' : 'Capital of the Czech Republic',
         
         // destination info
-        'info' : `Prague, Nicknamed “the City of a Hundred Spires,” it's known for its Old Town Square, the heart of its historic core, with colorful baroque buildings, Gothic churches and the medieval Astronomical Clock`,
+        'info' : `Known for its Old Town Square, the heart of its historic core, with colorful baroque buildings, Gothic churches.`,
 
         /*
             gallery Image source
@@ -168,7 +168,7 @@ const categories = [
         'tag' : 'Bavaria’s capital in Germany',
         
         // destination info
-        'info' : 'Munich is home to centuries-old buildings and numerous museums. The city is known for its annual Oktoberfest celebration and its beer halls, including the famed Hofbräuhaus',
+        'info' : 'Munich is home to centuries-old buildings, its annual Oktoberfest celebration and its beer halls.',
 
         /*
             gallery Image source
@@ -220,10 +220,10 @@ const categories = [
         'title' : 'Singapore ',
 
         // destination tag
-        'tag' : 'officially the Republic of Singapore',
+        'tag' : 'The Republic of Singapore',
 
         // destination info
-        'info' : `Though physically small, Singapore is an economic giant. It has been Southeast Asia's most modern city for over a century. The city blends Malay, Chinese, Arab, Indian and English cultures and religions.`,
+        'info' : `Singapore has been Southeast Asia's most modern city for over a century. The city blends together many cultures and religions.`,
 
         
 
@@ -280,7 +280,7 @@ const categories = [
         'tag' : 'Biggest Island of Thailand',
 
         // destination info
-        'info' : `Phuket, a rainforested, mountainous island in the Andaman Sea, has some of Thailand’s most popular beaches, mainly situated along the clear waters of the western shore. The island is home to many high-end seaside resorts, spas and restaurants.`,
+        'info' : `A rainforested & mountainous island in the Andaman Sea, has some of Thailand’s most popular beaches.`,
 
         /*
             gallery Image source
@@ -334,7 +334,7 @@ const categories = [
         'tag' : 'South Island, New Zealand',
 
         // destination info
-        'info' : `Queenstown, New Zealand, sits on the shores of the South Island’s Lake Wakatipu, set against the dramatic Southern Alps. Renowned for adventure sports, it’s also a base for exploring the region’s vineyards and historic mining towns.`,
+        'info' : `Sits on the shores of the South Island’s Lake Wakatipu, set against the dramatic Southern Alps. Renowned for adventure sports.`,
 
         /*
             gallery Image source
