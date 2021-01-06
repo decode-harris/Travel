@@ -246,8 +246,8 @@ html, body {
         padding: var(--sm);
         
         /* dev */
-        border: var(--border);
-        color: var(--color);
+        /* border: var(--border);
+        color: var(--color); */
     }
 
     /* main [ gallery ] */
