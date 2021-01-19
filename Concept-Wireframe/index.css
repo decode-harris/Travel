@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+
+    --background: rgb(30, 18, 75);
+    --border: 2px solid #000;
+    --color: #000;
+
+    --sm: 5%;
+    --md: 10%;
+    --lg: 20%;
+
+    --font: 'Poppins', sans-serif;
+
+    /* font-family: 'Poppins', sans-serif; */
+
+    /* dev borders */
+    --wireframe: 2px solid darkblue;
+    --component: 2px solid darkgreen;
+    --debugging: 2px solid darkred;
+
+}
+
+/* page wrapper */
+.page {
+    min-height: 100vh;
+    font-family: var(--font);
+
+    /* dev */
+    border: var(--wireframe);
+}
+
+/* mobile [ navigation bar ] */
+.mobile {
+    /* display props [ flex ] */
+    display: flex;
+    justify-content: space-between;
+
+    /* component props */
+    padding: var(--sm);
+    
+    /* dev */
+    border: var(--wireframe);
+}
+.mobile h1 {
+    font-size: 1.85rem;
+    letter-spacing: 0.4rem;
+
+    /* dev */
+    border: var(--debugging);
+}
+.mobile button {
+    width: 100%;
+    max-width: 60px;
+
+    /* dev */
+    border: var(--debugging);
+}
+
+/* header [ content overview ] */
+header {
+
+
+    /* component props */
+    padding: var(--md) var(--sm);
+
+    /* dev */
+    border: var(--component);
+}
+
+
+
+
+/* main [ content introduction ]  */
+main {
+    /* component props */    
+    padding: var(--sm);
+
+    /* dev */
+    border: var(--wireframe);
+}
+
+main img {
+    border-radius: 10px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* content [ text properties ] */
+.text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}

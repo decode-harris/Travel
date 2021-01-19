@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+/* css reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* css variables */
+:root {
+
+    --background: rgb(30, 18, 75);
+    --border: 2px solid #000;
+    --color: #000;
+
+    --sm: 5%;
+    --md: 10%;
+    --lg: 20%;
+
+    --font: 'Poppins', sans-serif;
+
+    /* font-family: 'Poppins', sans-serif; */
+
+    /* dev borders */
+    --wireframe: 2px solid darkblue;
+    --component: 2px solid darkgreen;
+    --debugging: 2px solid darkred;
+
+}
+
+/* css global */
+html, body {
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+}
+
+
+/* page wrapper */
+.page {
+    font-family: var(--font);
+    min-height: 100vh;
+    
+    /* dev */
+    border: var(--wireframe);
+}
+
+/* header component */
+.header {
+    padding: var(--sm);
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+/* container component */
+.container {
+
+    --n: 1;
+
+    /* display props [ flex ] */
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    /* containment props [ overflow ] */
+    overflow-y: hidden;
+
+    /* dimensions */
+    height: 50vh;
+    max-height: 100vh;
+
+    /* transform props */
+    transform: translate(calc(var(--i, 0) / var(--n) * - 100%));;
+
+    /* dev */
+    border: var(--component);
+}
+
+.container .box {
+
+    /* display props [ flex ] */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* dimensions */
+    height: 100%;
+    min-width: 100%;
+    width: 100%;
+    width: calc(100% / var(--n));
+    
+    /* component props */
+    font-size: 4rem;
+    font-weight: bold;
+    pointer-events: none;
+    
+    /* dev */
+    border: var(--debugging);
+}
