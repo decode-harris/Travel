@@ -1,13 +1,10 @@
 const container = document.querySelector('.container'), boxes = container.children.length;
+console.log(boxes);
 
 container.style.setProperty('--n', boxes);
 
 
-unify = (e) => {
-
-    return e.changedTouches ? e.changedTouches[0] : e;
-
-}
+unify = (e) => { return e.changedTouches ? e.changedTouches[0] : e };
 
 let x0 = null;
 
@@ -22,16 +19,21 @@ lock = (e) => {
     // test [ x coords value ]
     console.log(x0);
 }
+
 // function [ move ]
 move = (e) => {
     if (x0 || x0 === 0) {
+        // 
         let dx = unify(e).clientX - x0, s = Math.sin(dx);
 
-        if ((i > 0 || s < 0) && (i  < boxes - 1 || s > 0))
-            
+        console.log('sin : ' + s);
+
+        if ((i > 0 || s < 0) && (i  < boxes - 1 || s > 0)) {
+
             container.style.setProperty('--i', i -= s);
 
             x0 = null;
+        }
     }
 }
 
@@ -43,3 +45,5 @@ container.addEventListener('touchstart', lock, false);
 
 container.addEventListener('mouseup', move, false);
 container.addEventListener('touchend', move, false);
+
+container.addEventListener('touchmove', e => {e.preventDefault()}, false);

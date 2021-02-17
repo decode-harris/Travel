@@ -10,18 +10,20 @@
 /* css variables */
 :root {
 
+    /* color themes */
     --background: rgb(30, 18, 75);
     --border: 2px solid #000;
     --color: #000;
 
+    /* page spacing */
     --sm: 5%;
     --md: 10%;
     --lg: 20%;
 
-    --font: 'Poppins', sans-serif;
-
+    /* google fonts */
     /* font-family: 'Poppins', sans-serif; */
-
+    --font: 'Poppins', sans-serif;
+    
     /* dev borders */
     --wireframe: 2px solid darkblue;
     --component: 2px solid darkgreen;
@@ -29,73 +31,71 @@
 
 }
 
-/* css global */
-html, body {
-    scroll-behavior: smooth;
-}
-body {
+/* gallery [ component wrapper ] */
+.gallery {
     overflow-x: hidden;
-}
 
-
-/* page wrapper */
-.page {
-    font-family: var(--font);
-    min-height: 100vh;
-    
-    /* dev */
-    border: var(--wireframe);
-}
-
-/* header component */
-.header {
-    padding: var(--sm);
-    text-align: center;
-    text-transform: capitalize;
-    letter-spacing: 2px;
-}
-/* container component */
-.container {
-
-    --n: 1;
-
-    /* display props [ flex ] */
-    display: flex;
-    align-items: center;
-    width: 100%;
-
-    /* containment props [ overflow ] */
-    overflow-y: hidden;
-
-    /* dimensions */
-    height: 50vh;
+    height: 100vh;
     max-height: 100vh;
 
-    /* transform props */
-    transform: translate(calc(var(--i, 0) / var(--n) * - 100%));;
-
-    /* dev */
-    border: var(--component);
+    background: lightgreen;
 }
 
-.container .box {
+/* swipe [ gallery component ] */
+.swipe {
+
+    /* image placement default [ 1 ] */
+    --n: 1;
 
     /* display props [ flex ] */
     display: flex;
     justify-content: center;
     align-items: center;
 
-    /* dimensions */
-    height: 100%;
-    min-width: 100%;
+    /* overflow y [ remove slider ] */
+    overflow-y: hidden;
+
+    /* component dimensions */
     width: 100%;
-    width: calc(100% / var(--n));
-    
+    width: calc(var(--n)*100%);
+    height: 100%;
+
+    /* height: 100vh;
+    max-height: 100vh; */
+
+    /* transform props [ translate ] */
+    transform: translate(calc(var(--i)/var(--n)*-100%));
+    transition: transform 0.5s ease-out;
+
     /* component props */
-    font-size: 4rem;
-    font-weight: bold;
-    pointer-events: none;
-    
+    padding: var(--md) 0;
+
     /* dev */
     border: var(--debugging);
+
+}
+/* image [ gallery element ] */
+.swipe img {
+    height: 100%;
+    min-height: 20vh;
+    max-height: 40vh;
+    width: 100%;
+    width: calc(100%/var(--n));
+    user-select: none;
+    pointer-events: none;
+}
+
+/* media [ tablet || iPad ] */
+@media (min-width: 760px) {
+    .swipe img {
+        max-height: 50vh;
+        
+    }
+}
+/* media [ laptop || desktop ] */
+@media (min-width: 960px) {
+    .swipe img {
+        max-height: 50vh;
+        
+    }
 }

@@ -43,10 +43,11 @@ more.addEventListener('click', ()=> {
 
         // assign hidden element to display flex
         hidden.style.display = 'flex';
+        hidden.style.flexDirection = 'column';
 
         // test assignment styles on element
-        hidden.style.background = 'yellow';
-        hidden.style.padding = 'var(--sm)';
+        // hidden.style.background = 'yellow';
+        // hidden.style.padding = 'var(--sm)';
 
         // test
         console.log('hidden elements active : ' + hidden);
@@ -61,6 +62,16 @@ more.addEventListener('click', ()=> {
     }
 
 });
+
+
+
+
+
+
+
+
+
+// const API_KEY = 'AIzaSyCAKiQcmxa78MkZL4oTcMvTa43CNaOX8es';
 
 
 
