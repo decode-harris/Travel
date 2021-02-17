@@ -6,7 +6,7 @@ const navbar = document.querySelector('#navbar');
 let pos;
 
 // set a min section height for comparison
-let sectionHeight = '100vh';
+let sectionHeight = '609px';
 
 // [ scrollPositionProperties ] function
 scrollPositionProperties = () => {
@@ -17,41 +17,52 @@ scrollPositionProperties = () => {
     window.addEventListener('scroll', ()=> {
         
         // if scroll position is less than section height
-        if (window.scrollY < sectionHeight) {
-            
+        if (window.scrollY > sectionHeight ) {
+
             // get current position
             pos = window.scrollY;
             
             // assign nav position prop to top of header [ native placement ]
-            nav.style.top = '0';
+            nav.style.top = pos + 'px';
 
-            
-            
+            // assign menu btn background to darkgrey
+            menu.style.background = 'rgba(20, 20, 20, 0.822)';
+
             // test 
             // console.log('[ window IF ] :' + pos + 'px');
+        }
+        if (nav.style.top < '700px') {
+
+            // get current position
+            pos = window.scrollY;
+
+            nav.style.top = pos + 'px';
+        }
+        if (nav.style.top > '700px') {
+
+            // get current position
+            pos = window.scrollY;
+
+            nav.style.top = pos + 'px';
+
+            // assign menu btn background to darkgrey
+            menu.style.background = 'rgba(20, 20, 20, 0.822)';
         }
         else {
 
             // get current position
             pos = window.scrollY;
-
-            // menu button props
-
+            
+            // nav props
             nav.style.top = pos + 'px';
             nav.style.left = '0';
             nav.style.marginTop = '10vh';
 
-            navbar.style.top = '0';
-            navbar.style.left = '0';
+            // navbar props
+            // navbar.style.top = '0';
+            // navbar.style.left = '0';
 
-            menu.style.background = 'rgba(20, 20, 20, 0.822)';
-
             
-            
-            // nav component props
-            
-            
-            // nav.style.marginTop = '10vh';
 
             // test 
             // console.log('[ window Else ] :' + pos + 'px');
@@ -95,34 +106,3 @@ menu.addEventListener('click', ()=> {
     }
     
 });
-
-// function [ navigationDefaults ]
-navigationDefaults = () => {
-
-    // get current position
-    pos = window.scrollY;
-
-    
-    if (window.scrollY < sectionHeight) {
-
-        
-        
-
-        console.log('navbar if ' + pos +  'px');
-        
-        // navbar.style.top = pos + 'px';
-    }
-    else {
-        navbar.style.display = 'flex';
-        // navbar.style.display = 'none';
-    }
-    
-    
-
-
-    
-
-}
-
-// init [ navigationDefaults ] function
-// navigationDefaults();

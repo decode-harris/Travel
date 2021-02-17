@@ -175,11 +175,11 @@ html {
 
 
     /* DEVELOPER REMOVAL */
-    display: none;
+    /* display: none; */
 }
 
 /* navigation */
-.nav-bar {
+.header .nav-bar {
 
     /* display props [ flex - space-between - center ] */
     display:flex;
@@ -194,11 +194,10 @@ html {
 
     color: #FFF;
 
-    position: sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
     
-    /* bottom: 0;
-    left: 0; */
-
     /* border-bottom: 1px solid darkgrey; */
 
     z-index: 999;
@@ -226,6 +225,8 @@ html {
     /* background: rgba(20, 20, 20, 0.822); */
     /* border: 1px solid #000; */
     border: none;
+
+    transition: all 0.3s ease-in;
     
 }
 /* nav component */
@@ -243,6 +244,7 @@ nav {
     width: 0;
     height: 100%;
     max-height: 90vh;
+    margin-top: 10vh;
     
     z-index: 500;
 
@@ -251,7 +253,7 @@ nav {
     /* component styles */
     background: #FFF;
     color: var(--mode);
-    border-right: 3px solid var(--mode);
+    
 
     /* transition props */
     transition: 0.3s;
@@ -363,7 +365,7 @@ nav .profile p {
 main .title {
     
     /* component props */
-    padding: var(--md) var(--sm);
+    padding: var(--lg) var(--sm);
 
 }
 main .title h2 {
@@ -372,7 +374,7 @@ main .title h2 {
 main #content-tagline {
     font-size: 1.35rem;
     text-transform: capitalize;
-    padding-bottom: var(--md);
+    padding-bottom: var(--lg);
 }
 main .title p {
     font-size: 1.35rem;
