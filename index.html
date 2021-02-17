@@ -4,97 +4,507 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="developer" content="Christopher Harris">
-    
+
     <!-- title -->
-    <title>TravelGallery</title>
+    <title>Travel Concept [ Development ]</title>
 
     <!-- css -->
     <link rel="stylesheet" href="index.css">
 
-    <!-- js [ assignments data allocation ] -->
-    <script defer src="assignments.js"></script>
-
-    <!-- js [ gallery content ] -->
+    <!-- lib [ swiper js ] -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+    <!-- js -->
+    <script defer src="index.js"></script>
+    <script defer src="swiper.js"></script>
     <script defer src="content.js"></script>
+    <script defer src="component-navigation.js"></script>
 
-    <!-- js [ page default ] -->
-    <script defer src="default.js"></script>
-
-    <!-- js [ elements class assignments ] -->
-    <script defer src="elements.js"></script>
-
-    <!-- js [ fullscreen image ] -->
-    <!-- <script defer src="fullscreen.js"></script> -->
-
+    <!-- libs [ font awesome ] -->
+    <script src="https://kit.fontawesome.com/4dff4a55ad.js" crossorigin="anonymous"></script>
     
 
 </head>
-<body>
+<body onload="amsterdamContent()">
 
     <!-- [ page ] -->
     <div class="page">
 
-        <!-- [ container ] -->
-        <section class="container">
+        <!--  [ header ] -->
+        <header class="header">
 
-            <!-- [ filter ] -->
-            <div class="filter">
+            <!-- [ header-video ] -->
+            <div class="header-video">
+                
+                <!-- [ video background ] -->
+                <video autoplay playsinline muted loop id="bg-video" src="lake.mp4"></video>
+                <!-- [ video background ] -->
 
-                <!-- [ filter : buttons ] -->
-                <button id="amsbtn">amsterdam</button>
-                <button id="czebtn">prague</button>
-                <button id="gerbtn">munich</button>
-                <button id="sinbtn">singapore</button>
-                <button id="thabtn">phuket</button>
-                <button id="nzlbtn">queenstown</button>
-                <!-- [ filter : buttons ] -->
+            </div>
+            <!-- [ header-video ] -->
+
+            <!-- header content -->
+            <div class="header-content">
+
+                <!-- title -->
+                <h1>explr</h1>
+                <!-- title -->
+
+                <!-- view more -->
+                <button class="btn">more</button>
+                <!-- view more -->
+
+            </div>
+            <!-- header content -->
+        
+        </header>
+        <!--  [ header ] -->
+
+         <!-- [ nav ] -->
+         <nav id="nav" class="nav">
+
+            <!-- [ profile ] -->
+            <div class="profile">
+                <!-- [ profile image ] -->
+                <span class="profile-img"></span>
+                <!-- [ profile image ] -->
+
+                <!-- [ profile info ] -->
+                <h3>christopher harris</h3>
+                <p>travel gallery & experiences</p>
+                <!-- [ profile info ] -->
+
+            </div>
+            <!-- [ profile ] -->
+
+            <!-- [ list ] -->
+            <ul class="list">
+
+                <!-- [ items ] -->
+                <li class="items">
+                    <!-- reactive btn -->
+                    <button class="btn" id="button-amsterdam">
+                        amsterdam, holland
+                    </button>
+                    <!-- reactive btn -->
+                </li>
+                <li class="items">
+                    <!-- reactive btn -->
+                    <button class="btn" id="button-czechrepublic">
+                        prague, czech republic
+                    </button>
+                    <!-- reactive btn -->
+                </li>
+                <li class="items">
+                    <!-- reactive btn -->
+                    <button class="btn" id="button-germany">
+                        munich, germany
+                    </button>
+                    <!-- reactive btn -->
+                </li>
+                <li class="items">
+                    <!-- reactive btn -->
+                    <button class="btn" id="button-singapore">
+                        singapore, singapore
+                    </button>
+                    <!-- reactive btn -->
+                </li>
+                <li class="items">
+                    <!-- reactive btn -->
+                    <button class="btn" id="button-newzealand">
+                        queenstown, new zealand
+                    </button>
+                    <!-- reactive btn -->
+                </li>
+                <li class="items">
+                    <!-- reactive btn -->
+                    <button class="btn" id="button-thailand">
+                        phuket, thailand
+                    </button>
+                    <!-- reactive btn -->
+                </li>
+                <!-- [ items ] -->
+
+            </ul>
+            <!-- [ list ] -->
+
+        </nav>
+        <!-- [ nav ] -->
+
+        <!-- [ main ] -->
+        <main class="main" id="main">
+
+            <!-- elmnts -->
+            <div class="nav-bar" id="navbar">
+
+                <!-- logo -->
+                <h5>CH</h5>
+                <!-- logo -->
+
+                <!-- [ menu btn ] -->
+                <button class="btn" id="menu"><i class="fas fa-bars"></i></button>
+                <!-- [ menu btn ] -->
             
             </div>
-            <!-- [ filter ] -->
+            <!-- elmnts -->
 
-            <!-- [ gallery ] -->
-            <main class="gallery">
+           <!-- [ landing ] -->
+            <section class="landing">
 
-                <!-- [ information ] -->
-                <article id="article">
+                <!-- [ title ] -->
+                <div class="title">
 
-                    <!-- [ title ] -->
-                    <h2 class="title"></h2>
-                    <!-- [ title ] -->
+                    <!-- [ content title ] -->
+                    <h2 id="content-title"></h2>
+                    <!-- [ content title ] -->
 
-                    <!-- [ tag ] -->
-                    <h5 class="tag"></h5>
-                    <!-- [ tag ] -->
+                    <!--  [ content-tagline ] -->
+                    <h6 id="content-tagline"></h6>
+                    <!--  [ content-tagline ] -->
                     
-                    <!-- [ info ] -->
-                    <p class="info"></p>
-                    <!-- [ info ] -->
                     
-                </article>
-                <!-- [ information ] -->
+                    <p class="misc">
+                        <!-- [ icon ] -->
+                        <i class="far fa-money-bill-alt"></i>
+                        <!-- [ icon ] -->
+
+                        <!-- [ currency tag ] -->
+                        <span class="tag" id="currency-tag"></span>
+                        <!-- [ currency tag ] -->
+
+                    </p>
+                    <!-- [ misc ] -->
+
+                    <!-- [ misc ] -->
+                    <p class="misc">
+                        
+                        <!-- [ icon ] -->
+                        <i class="fas fa-language"></i>
+                        <!-- [ icon ] -->
+
+                        <!-- [ language tag ] -->
+                        <span class="tag" id="language-tag"></span>
+                        <!-- [ language tag ] -->
+
+                    </p>
+                    <!-- [ misc ] -->
+
+                    <!-- [ misc ] -->
+                    <p class="misc">
+
+                        <!-- [ icon ] -->
+                        <i class="fas fa-globe-europe"></i>
+                        <!-- [ icon ] -->
+
+                        <!-- [ region tag ] -->
+                        <span class="tag" id="region-tag"></span>
+                        <!-- [ region tag ] -->
+
+                    </p>
+                    <!-- [ misc ] -->
+                    
+
+                </div>
+                <!-- [ title ] -->
+
+                <!-- [ banner ] -->
+                <div class="banner">
+
+                    <!-- [ content-banner ] -->
+                    <img id="content-banner" src="img/photo.jpeg" alt="romania castle">
+                    <!-- [ content-banner ] -->
+
+                </div>
+                <!-- [ banner ] -->
+
+            </section>
+            <!-- [ landing ] -->
+
+            <!-- [ overview ] -->
+            <article class="overview">
+
+                <h3>welcome to 
+                    <!-- [ alter ] -->
+                    <span id="content-country">
+                        romania
+                    </span>
+                    <!-- [ alter ] -->
+                </h3>
                 
-                <!--  [ photos ] -->
-                <div class="photos"></div>
-                <div class="photos"></div>
-                <div class="photos"></div>
-                <div class="photos"></div>
-                <div class="photos"></div>
-                <div class="photos"></div>
-                <div class="photos"></div>
-                <!--  [ photos ] -->
+                <!-- [ text ] -->
+                <p class="text" id="content-info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing
+                    elit. Autem omnis earum cumque alias rem, illo 
+                    sequi aliquam reiciendis velit? Molestiae!
+                </p>
+                <!-- [ text ] -->
 
-            </main>
-            <!-- [ gallery ] -->
+                <!-- [ text ( hidden ) ] -->
+                <p class="text text-hidden">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing
+                    elit. Autem omnis earum cumque alias rem, illo 
+                    sequi aliquam reiciendis velit? Molestiae!
 
-            <!-- [ fullscreen ] -->
-            <div class="fullscreen"></div>
-            <!-- [ fullscreen ] -->
+                    <!-- [ break ] -->
+                    <span class="break"></span>
+                    <!-- [ break ] -->
 
-        </section>  
-        <!-- [ container ] -->
+                    Lorem ipsum, dolor sit amet consectetur adipisicing
+                    elit. Autem omnis earum cumque alias rem, illo 
+                    sequi aliquam reiciendis velit? Molestiae!
+                </p>
+                <!-- [ text ( hidden ) ] -->
+                
+                <!-- [ more ] -->
+                <button class="btn" id="more">read more</button>
+                <!-- [ more ] -->
+
+            </article>
+            <!-- [ overview ] -->
+
+            <!-- [ info ] -->
+            <article class="info">
+                
+                <!-- [ highlights information ] -->
+                <h4>highlights</h4>
+                <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, asperiores.
+                </p>
+
+                <!-- [ gallery ] -->
+                <section class="gallery" id="gridzero">
+
+                    <!-- [ gallery panels ] -->
+                    <div class="panels">
+                        <img class="grid-images" src="" alt="">
+                    </div>
+                    <div class="panels">
+                        <img class="grid-images" src="" alt="">
+                    </div>
+                    <div class="panels">
+                        <img class="grid-images" src="" alt="">
+                    </div>
+                    <!-- [ gallery panels ] -->
+                
+                </section>
+                <!-- [ gallery ] -->
+
+                <!-- [ highlights information ] -->
+
+                <!-- [ experiences information ] -->
+                <h4>experiences</h4>
+                <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, asperiores.
+                </p>
+
+                <!-- [ gallery ] -->
+                <section class="gallery" id="gridone">
+
+                    <!-- [ gallery panels ] -->
+                    <div class="panels">
+                        <img class="grid-images" src="" alt="">
+                    </div>
+                    <div class="panels">
+                        <img class="grid-images" src="" alt="">
+                    </div>
+                    <div class="panels">
+                        <img class="grid-images" src="" alt="">
+                    </div>
+                    <!-- [ gallery panels ] -->
+                
+                </section>
+                <!-- [ gallery ] -->
+
+                <!-- [ experiences information ] -->
+
+                <!-- [ exploration information ] -->
+                <h4>exploration</h4>
+                <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, asperiores.
+                </p>
+
+                <!-- [ gallery ] -->
+                <section class="gallery" id="gridtwo">
+
+                    <!-- [ gallery panels ] -->
+                    <div class="panels">
+                        <img class="grid-images" src="" alt="">
+                    </div>
+                    <div class="panels">
+                        <img class="grid-images" src="" alt="">
+                    </div>
+                    <div class="panels">
+                        <img class="grid-images" src="" alt="">
+                    </div>
+                    <!-- [ gallery panels ] -->
+                
+                </section>
+                <!-- [ gallery ] -->
+
+                <!-- [ more info ] -->
+                <section class="moreinfo">
+
+                    <!-- [ title ] -->
+                    <h4>find out more</h4>
+                    <!-- [ title ] -->
+
+                    <!-- [ text ] -->
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, asperiores.
+                    </p>
+                    <!-- [ text ] -->
+
+                    <!-- [btn more ] -->
+                    <button id="buttonMore" class="btn">info</button>
+                    <!-- [btn more ] -->
+
+                    <!-- swipe -->
+                    <div class="swipe" style="display: none;">
+
+                        <!-- [ swiper-container ] -->
+                        <section class="swiper-container">
+
+                            <!-- [swiper-wrapper ] -->
+                            <div class="swiper-wrapper">
+
+                                <!-- [ swiper-slide ] -->
+                                <img class="swiper-slide" src="" alt="x00">
+                                <img class="swiper-slide" src="" alt="x01">
+                                <img class="swiper-slide" src="" alt="x02">
+                                <img class="swiper-slide" src="" alt="x03">
+                                <img class="swiper-slide" src="" alt="x04">
+                                <!-- [ swiper-slide ] -->
+
+                            </div>
+                            <!-- [swiper-wrapper ] -->
+                        
+                        </section>
+                        <!-- [ swiper-container ] -->
+
+                    </div>
+                    <!-- swipe -->
+
+                </section>
+                <!-- [ more info ] -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- [ exploration information ] -->
+
+                <!-- [ location information ] -->
+                <div class="location" style="display: none;">
+                    
+                    <!-- [ information ] -->
+                    <h4>location</h4>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, asperiores.
+                    </p>
+                    <!-- [ information ] -->
+
+                    
+
+                    <!-- [ maps ] -->
+                    <div class="map" id="map"></div>
+                    <!-- [ maps ] -->
+
+                </div>
+                <!-- [ location information ] -->
+
+            </article>
+            <!-- [ info ] -->
+
+            <!-- [ extended ] -->
+            <section class="extended" style="display: none;">
+
+
+                <!-- [ list ] -->
+                <ul class="list">
+
+                    <!-- [ items ] -->
+                    <li class="items">
+                        
+                        <!-- [ button home ] -->
+                        <button id="home">
+                            home
+                        </button>
+                        <!-- [ button home ] -->
+
+                        <!-- [ button previous ] -->
+                        <button class="prev">
+                            prev
+                        </button>
+                        <!-- [ button previous ] -->
+
+                    </li>
+                    <li class="items">
+                        
+                        <!-- [ button next ] -->
+                        <button id="next">
+                            next
+                        </button>
+                        <!-- [ button next ] -->
+
+                    </li>
+                    <!-- [ items ] -->
+                        
+                </ul>
+                <!-- [ list ] -->
+            
+            </section>
+            <!-- [ extended ] -->
+        
+        </main>
+        <!-- [ main ] -->
+
+        <!-- [ footer ] -->
+        <footer class="footer">
+
+            <h6>thank you for viewing this website</h6>
+                
+                <!-- [ signiture ] -->
+                <!-- <span class="signiture">
+                    Christopher Harris
+                </span> -->
+                <!-- [ signiture ] -->
+
+            </h6>
+
+        </footer>
+        <!-- [ footer ] -->
+        
 
     </div>
     <!-- [ page ] -->
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <!-- <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCAKiQcmxa78MkZL4oTcMvTa43CNaOX8es&callback=initMap&libraries=&v=weekly' async></script> -->
+
+    <!-- js [ swiper js ] -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- js [ swiper js ] -->
+
     
 </body>
 </html>
