@@ -617,7 +617,6 @@ let i;
 // function [ assignImageContent ] 
 assignImageContent = () => {
 
-    
     // event [ buttonAmsterdam ]
     buttonAmsterdam.addEventListener('click', ()=> {
 
@@ -626,6 +625,9 @@ assignImageContent = () => {
 
         // apply nav width to default [ 0% ]
         nav.style.width = '0%';
+
+        // assign navbar background to transparent
+        navbar.style.background = 'transparent';
 
         // change icon class list to [ bars ] menu
         icon.classList = 'fas fa-bars';
@@ -717,6 +719,9 @@ assignImageContent = () => {
         // apply nav width to default [ 0% ]
         nav.style.width = '0%';
 
+        // assign navbar background to transparent
+        navbar.style.background = 'transparent';
+
         // change icon class list to [ bars ] menu
         icon.classList = 'fas fa-bars';
 
@@ -807,6 +812,9 @@ assignImageContent = () => {
         // reset nav width to default [ 0% ]
         nav.style.width = '0%';
 
+        // assign navbar background to transparent
+        navbar.style.background = 'transparent';
+
         // change icon class list to [ bars ] menu
         icon.classList = 'fas fa-bars';
 
@@ -896,6 +904,9 @@ assignImageContent = () => {
         // reset nav width to default [ 0% ]
         nav.style.width = '0%';
 
+        // assign navbar background to transparent
+        navbar.style.background = 'transparent';
+
         // change icon class list to [ bars ] menu
         icon.classList = 'fas fa-bars';
 
@@ -982,6 +993,9 @@ assignImageContent = () => {
         // reset nav width to default [ 0% ]
         nav.style.width = '0%';
 
+        // assign navbar background to transparent
+        navbar.style.background = 'transparent';
+
         // change icon class list to [ bars ] menu
         icon.classList = 'fas fa-bars';
 
@@ -1065,6 +1079,9 @@ assignImageContent = () => {
 
         // reset nav width to default [ 0% ]
         nav.style.width = '0%';
+
+        // assign navbar background to transparent
+        navbar.style.background = 'transparent';
 
         // change icon class list to [ bars ] menu
         icon.classList = 'fas fa-bars';

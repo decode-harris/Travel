@@ -1,6 +1,7 @@
 // nav component selector
 const nav = document.querySelector('#nav');
 const navbar = document.querySelector('#navbar');
+const logo = document.querySelector('#logo');
 
 // position variable [ undefined ]
 let pos;
@@ -15,39 +16,52 @@ scrollPositionProperties = () => {
 
     // event [ window ] : scroll position listener
     window.addEventListener('scroll', ()=> {
+
+        // get current position
+        pos = window.scrollY;
+
+        if (pos <= '700px') {
+            console.log('pos less than 700px' + pos);
+        }
         
-        // if scroll position is less than section height
-        if (window.scrollY > sectionHeight ) {
-
-            // get current position
-            pos = window.scrollY;
-            
-            // assign nav position prop to top of header [ native placement ]
-            nav.style.top = pos + 'px';
-
-            // assign menu btn background to darkgrey
-            menu.style.background = 'rgba(20, 20, 20, 0.822)';
-
-            // test 
-            // console.log('[ window IF ] :' + pos + 'px');
-        }
-        if (nav.style.top < '700px') {
-
-            // get current position
-            pos = window.scrollY;
-
-            nav.style.top = pos + 'px';
-        }
         if (nav.style.top > '700px') {
 
-            // get current position
-            pos = window.scrollY;
+            
 
+            // assign nav top to pos + px value
             nav.style.top = pos + 'px';
 
             // assign menu btn background to darkgrey
             menu.style.background = 'rgba(20, 20, 20, 0.822)';
+
+            // assign logo style to visibility [ hidden ]
+            logo.style.visibility = 'hidden';
         }
+
+        // if scroll position is less than section height
+        // if (window.scrollY > sectionHeight ) {
+
+        //     // get current position
+        //     pos = window.scrollY;
+            
+        //     // assign nav position prop to top of header [ native placement ]
+        //     nav.style.top = pos + 'px';
+
+        //     // assign menu btn background to darkgrey
+        //     menu.style.background = 'rgba(20, 20, 20, 0.822)';
+
+        //     // assign logo style to visibility [ visible ]
+        //     logo.style.visibility = 'visible';
+
+        //     // test 
+        //     // console.log('[ window IF ] :' + pos + 'px');
+        // }
+        
+        
+        // if (nav.style.top <= '699px') {
+        //     // assign menu btn background to darkgrey
+        //     menu.style.background = 'transparent';
+        // }
         else {
 
             // get current position
@@ -81,12 +95,17 @@ let icon = document.querySelector('#menu i');
 // menu button event
 menu.addEventListener('click', ()=> {
 
+    menu.style.background = 'rgba(20, 20, 20, 0.822)';
+    
     // default hidden element to display none
     hidden.style.display = 'none';
     // default hidden element inner html
     hidden.innerHTML = 'read more';
 
     if (icon.classList != 'fas fa-times') {
+
+        // assign navbar background to white
+        navbar.style.background = '#FFF';
         
         // change icon class list to [ X ] close 
         icon.classList = 'fas fa-times';
@@ -99,6 +118,9 @@ menu.addEventListener('click', ()=> {
     else {
         // change icon class list to [ bars ] menu
         icon.classList = 'fas fa-bars';
+
+        // assign navbar background to transparent
+        navbar.style.background = 'transparent';
         
         // change nav width back to default [ 0% ]
         nav.style.width = '0%';
