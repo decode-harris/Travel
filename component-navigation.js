@@ -24,6 +24,8 @@ scrollPositionProperties = () => {
             
             // assign nav position prop to top of header [ native placement ]
             nav.style.top = '0';
+
+            
             
             // test 
             // console.log('[ window IF ] :' + pos + 'px');
@@ -41,6 +43,10 @@ scrollPositionProperties = () => {
 
             navbar.style.top = '0';
             navbar.style.left = '0';
+
+            menu.style.background = 'rgba(20, 20, 20, 0.822)';
+
+            
             
             // nav component props
             

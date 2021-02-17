@@ -192,7 +192,6 @@ html {
 
     padding: calc(var(--sm) / 2);
 
-    background: rgba(20, 20, 20, 0.822);
     color: #FFF;
 
     position: sticky;
@@ -224,6 +223,7 @@ html {
     padding: calc(var(--sm) / 2);
     
     background: transparent;
+    /* background: rgba(20, 20, 20, 0.822); */
     /* border: 1px solid #000; */
     border: none;
     
