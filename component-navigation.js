@@ -32,7 +32,7 @@ scrollPositionProperties = () => {
             nav.style.top = pos + 'px';
 
             // assign menu btn background to darkgrey
-            menu.style.background = 'rgba(20, 20, 20, 0.822)';
+            // menu.style.background = 'rgba(20, 20, 20, 0.822)';
 
             // assign logo style to visibility [ hidden ]
             logo.style.visibility = 'hidden';
