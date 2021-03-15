@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVEL [ concept application ]</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <script defer src="index.js"></script>
+</head>
+<body>
+
+    <!-- page -->
+    <div class="page">
+
+        <!-- views -->
+        <section class="views" style="display: none;">
+            <h2>login layer</h2>
+        </section>
+        <section class="views">
+
+            <!-- form -->
+            <form action="" class="form">
+
+                <!-- counter -->
+                <div class="counter">
+                    <!-- steps -->
+                    <span class="steps"></span>
+                    <span class="steps"></span>
+                    <span class="steps"></span>
+                    <span class="steps"></span>
+                    <!-- steps -->
+                </div>
+                <!-- counter -->
+
+                <!-- tabs -->
+                <div class="tabs">
+                    <h3>Destination</h3>
+
+                    <!-- destination -->
+                    <label for="destination">destination</label>
+                    <input type="text" id="destination">
+
+                    <label for="destination-name">city</label>
+                    <input type="text" id="destination-name">
+
+                    <label for="destination-type">type</label>
+                    <input type="text" id="destination-type">
+                    <!-- destination -->
+
+                </div>
+                <div class="tabs">
+                <h3>Accommodation</h3>
+
+                    <!-- accommodation -->
+                    <label for="accommodation">accommodation</label>
+                    <input type="text" id="accommodation">
+                
+                    <label for="accommodation-time">days</label>
+                    <input type="text" id="accommodation-time">
+                
+                    <label for="accommodation-cost">cost</label>
+                    <input type="text" id="accommodation-cost">
+                    <!-- accommodation -->
+                
+                </div>
+                <div class="tabs">
+                    
+                    <h3>Transportation</h3>
+
+                    <!-- transportation -->
+                    <label for="transportation">transportation</label>
+                    <input type="text" id="transportation">
+
+                    <label for="transportation">type</label>
+                    <input type="text" id="transportation-type">
+
+                    <label for="transportation">cost</label>
+                    <input type="text" id="transportation-cost">
+                    <!-- transportation -->
+                    
+                </div>
+                <div class="tabs">
+
+                    <!-- tabs title -->
+                    <h3>overview</h3>
+                    <!-- tabs title -->
+
+                    <!-- list -->
+                    <ul class="list">
+
+                        <!-- item -->
+                        <li class="item">
+                            <h5>Destination</h5>
+                            <span id="des"></span>
+                            <span id="des-name"></span>
+                            <span id="des-type"></span>
+                        </li>
+                        <li class="item">
+                            <h5>Accommodation</h5>
+                            <span id="acc"></span>
+                            <span id="acc-time"></span>
+                            <span id="acc-cost"></span>
+                        </li>
+                        <li class="item">
+                            <h5>Transport</h5>
+                            <span id="tsp"></span>
+                            <span id="tsp-type"></span>
+                            <span id="tsp-cost"></span>
+                        </li>
+                    </ul>
+                    <!-- list -->
+                </div>
+                <!-- tabs -->
+                
+                <!-- buttons -->
+                <div class="buttons">
+                
+                    <!-- btn next -->
+                    <button class="btn" id="prev" onclick="nextPrev(-1)">prev</button>
+                    <!-- btn next -->
+
+                    <!-- btn view -->
+                    <button class="btn" id="view">
+                        <a href="#list">View</a>
+                    </button>
+                    <!-- btn view -->
+
+                    <!-- btn next -->
+                    <button class="btn" id="next" onclick="nextPrev(1)">next</button>
+                    <!-- btn next -->
+                
+                </div>
+                <!-- buttons -->
+            
+            </form>
+            <!-- form -->
+
+        </section>
+        <section class="views" id="list">
+            
+            <!-- test title -->
+            <h2>calculation layer</h2>
+            <!-- test title -->
+
+            <!-- planner -->
+            <ul class="planner">
+                
+                <!-- case -->
+                <li class="case">1</li>
+                <li class="case">x</li>
+                <li class="case">x</li>
+                <!-- case -->
+
+            </ul>
+            <!-- planner -->
+
+            <!-- list -->
+            <ul class="list">
+
+                <!-- item -->
+                <li class="item">
+                    <h5>destination</h5>
+                    <span id="calculation-des"></span>
+                    <span id="calculation-des-name"></span>
+                    <span id="calculation-des-type"></span>
+                </li>
+                <li class="item">
+                    <h5>accommodation</h5>
+                    <span id="calculation-acc"></span>
+                    <span id="calculation-acc-cost"></span>
+                    <span id="calculation-acc-time"></span>
+                </li>
+                <li class="item">
+                    <h5>transportation</h5>
+                    <span id="calculation-tsp"></span>
+                    <span id="calculation-tsp-type"></span>
+                    <span id="calculation-tsp-cost"></span>
+                </li>
+                <!-- item -->
+
+                <!-- btn add -->
+                <button class="btn" id="add">add</button>
+                <!-- btn add -->
+            
+            </ul>
+            <!-- list -->
+
+        </section>
+        <!-- views -->
+
+    </div>
+    <!-- page -->
+    
+</body>
+</html>

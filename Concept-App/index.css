@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+
+    --background: rgb(30, 18, 75);
+    --border: 2px solid #000;
+    --color: #000;
+
+    --sm: 5%;
+    --md: 10%;
+    --lg: 20%;
+
+    --font: 'Poppins', sans-serif;
+    --head: 'Anton', sans-serif;
+
+    /* font-family: 'Poppins', sans-serif; */
+
+    /* dev borders */
+    --wireframe: 2px solid darkblue;
+    --component: 2px solid darkgreen;
+    --debugging: 2px solid darkred;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+/* page wrapper */
+.page {
+    height: 100vh;
+    font-family: var(--font);
+    position: relative;
+
+    
+    /* dev */
+    border: var(--wireframe);
+}
+
+.views {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    background: rgb(25, 9, 65);
+    padding: var(--md);
+}
+
+/* 
+    form component
+
+    contains :
+        tabs
+        counter
+        buttons
+
+*/
+form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    min-height: 100%;
+    min-width: 100%;
+    background: #FFF;
+    border-radius: 10px;
+}
+.tabs {
+    height: 100%;
+    width: 100%;
+
+    /* add property flex via javascript */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--sm);
+
+    /* display none by default */
+    display: none;
+    
+    /* dev */
+    border: var(--wireframe);
+}
+
+/* 
+    form counter
+
+    contains : 
+        counter
+        steps
+    
+*/
+.counter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #FFF;
+
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    min-width: 200px;
+    height: 10vh;
+
+    /* border: 2px solid red; */
+}
+.steps {
+    height: 15px;
+    width: 15px;
+
+    border: none;
+    border-radius: 50%;
+    opacity: 0.5;
+
+    background: darkslategray;
+}
+.steps.active {
+    opacity: 1;
+}
+.steps.finish {
+    background: rgb(25, 9, 65);
+}
+label {
+    
+    padding: var(--sm);
+
+    /* dev */
+    /* border: var(--wireframe); */
+}
+input {
+    padding: var(--sm);
+
+    width: 100%;
+}
+
+.buttons {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    
+    border: var(--component);
+
+}
+.buttons button {
+    min-width: 100px;
+    min-height: 40px;
+
+    
+    font-size: 1.03rem;
+    padding: calc(var(--sm) / 1.5);
+}
+button a {
+    height: 100%;
+    min-width: 100%;
+    padding: var(--sm);
+    border: 2px solid red;
+}
+.added {
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 
+
+    calculation || output component
+
+*/
+
+.planner {
+    display: flex;
+    justify-content: space-around;
+    background: #FFF;
+
+    padding: var(--sm);
+    margin-bottom: var(--sm);
+
+    width: 100%;
+
+    list-style-type: none;
+}
+.planner .case {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+
+    height: 60px;
+    width: 60px;
+
+    /* dev */
+    border: 2px solid red;
+}
+#add {  
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    background: red;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    color: #FFF;
+
+    /* dev */
+    border: 2px solid #FFF;
+}
+.list {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    background: #FFF;
+    height: 100%;
+    width: 100%;
+
+}
+.list .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    height: 100%;
+    width: 100%;
+    padding: var(--sm);
+
+    /* dev */
+    border: var(--debugging);
+    
+}
+.list .item h5 {
+    text-decoration: underline;
+    font-size: 1.15rem;
+}
