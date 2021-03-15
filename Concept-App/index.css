@@ -183,11 +183,14 @@ button a {
     calculation || output component
 
 */
-
+.layers {
+    height: 100%;
+    width: 100%;
+}
 .planner {
     display: flex;
     justify-content: space-around;
-    background: #FFF;
+    /* background: #FFF; */
 
     padding: var(--sm);
     margin-bottom: var(--sm);
@@ -206,7 +209,8 @@ button a {
     width: 60px;
 
     /* dev */
-    border: 2px solid red;
+    border: 2px solid #FFF;
+    color: #FFF;
 }
 #add {  
     position: absolute;

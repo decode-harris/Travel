@@ -123,7 +123,7 @@
 
                     <!-- btn view -->
                     <button class="btn" id="view">
-                        <a href="#list">View</a>
+                        <a href="#output">View</a>
                     </button>
                     <!-- btn view -->
 
@@ -138,55 +138,82 @@
             <!-- form -->
 
         </section>
-        <section class="views" id="list">
-            
-            <!-- test title -->
-            <h2>calculation layer</h2>
-            <!-- test title -->
+        <section class="views" id="output">
 
             <!-- planner -->
             <ul class="planner">
                 
                 <!-- case -->
-                <li class="case">1</li>
-                <li class="case">x</li>
-                <li class="case">x</li>
+                <li class="case" id="ul-x00">x</li>
+                <li class="case" id="ul-x01">x</li>
+                <li class="case" id="ul-x02">x</li>
                 <!-- case -->
 
             </ul>
             <!-- planner -->
 
-            <!-- list -->
-            <ul class="list">
+            <!-- layers -->
+            <article class="layers" id="x00">
 
-                <!-- item -->
-                <li class="item">
-                    <h5>destination</h5>
-                    <span id="calculation-des"></span>
-                    <span id="calculation-des-name"></span>
-                    <span id="calculation-des-type"></span>
-                </li>
-                <li class="item">
-                    <h5>accommodation</h5>
-                    <span id="calculation-acc"></span>
-                    <span id="calculation-acc-cost"></span>
-                    <span id="calculation-acc-time"></span>
-                </li>
-                <li class="item">
-                    <h5>transportation</h5>
-                    <span id="calculation-tsp"></span>
-                    <span id="calculation-tsp-type"></span>
-                    <span id="calculation-tsp-cost"></span>
-                </li>
-                <!-- item -->
+                <!-- list x01 -->
+                <ul class="list">
 
-                <!-- btn add -->
-                <button class="btn" id="add">add</button>
-                <!-- btn add -->
+                    <!-- item -->
+                    <li class="item">
+                        <h5>destination</h5>
+                        <span id="calculation-des"></span>
+                        <span id="calculation-des-name"></span>
+                        <span id="calculation-des-type"></span>
+                    </li>
+                    <li class="item">
+                        <h5>accommodation</h5>
+                        <span id="calculation-acc"></span>
+                        <span id="calculation-acc-cost"></span>
+                        <span id="calculation-acc-time"></span>
+                    </li>
+                    <li class="item">
+                        <h5>transportation</h5>
+                        <span id="calculation-tsp"></span>
+                        <span id="calculation-tsp-type"></span>
+                        <span id="calculation-tsp-cost"></span>
+                    </li>
+                    <!-- item -->
+
+                    <!-- btn add -->
+                    <button class="btn" id="add">add</button>
+                    <!-- btn add -->
+                
+                </ul>
+                <!-- list x01 -->
+
+            </article>
             
-            </ul>
-            <!-- list -->
+            <article class="layers" id="x01">
+                <!-- list x02 -->
+                <ul class="list">
+                    <li class="item">
+                        <h5>destination</h5>
+                        <div class="des">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        
+                    </li>
+                </ul>
+                <!-- list x02 -->
 
+            </article>
+            <article class="layers" id="x02">
+
+                <!-- list x03 -->
+                <ul class="list user-list"></ul>
+                <!-- list x03 -->
+
+
+            </article>
+            <!-- layers -->
+        
         </section>
         <!-- views -->
 

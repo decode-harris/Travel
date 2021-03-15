@@ -60,6 +60,28 @@ const next = document.querySelector('#next');
 const view = document.querySelector('#view');
 const add = document.querySelector('#add');
 
+let lists = document.querySelectorAll('.layers ul');
+for (i = 0; i < lists.length; i++) {
+
+    lists[i].style.display = 'none';
+
+}
+
+//     view.addEventListener('click', ()=> {
+
+//         if (lists[0].style.display == 'none') {
+//             lists[0].style.display = 'flex';
+//         }
+
+//     });
+
+//     // test
+//     console.log('lists as : ' + lists)
+
+
+
+// }
+
 // event [ add ] button
 add.addEventListener('click', ()=> {
 
@@ -68,19 +90,25 @@ add.addEventListener('click', ()=> {
     form.style.display = 'flex';
 
     showTab(0);
-    clearForm(0,1,2);
+
+    let added = document.querySelector('.added');
+    added.style.display = 'none';
+    clearForm();
 
 });
 
 // function [ clearForm ]
-clearForm = (currentTab) => {
+clearForm = () => {
+
+    if (currentTab != 0) {
+        currentTab = 0;
+        showTab(currentTab);
+    }
 
     let counter = document.querySelector('.counter');
     counter.style.display = 'flex';
 
     let steps = document.getElementsByClassName("steps");
-
-    
 
     // This function deals with validation of the form fields
     var x, y, i;
@@ -103,8 +131,7 @@ clearForm = (currentTab) => {
         
       }
     
-      currentTab = 0;
-      showTab(currentTab);
+      
     }
 
     for (i = 0; i < steps.length; i++) {
@@ -112,6 +139,7 @@ clearForm = (currentTab) => {
         steps[i].className = 'steps';
         console.log('steps as : ' + steps[i]);
     }
+
     
 
 }
@@ -196,7 +224,7 @@ function nextPrev(n) {
     if (currentTab >= x.length) {
 
         // submit the form
-        document.querySelector('.form').submit();
+        // document.querySelector('.form').submit();
 
         // apply a helper style for added list
         let added = document.createElement('div');
@@ -233,11 +261,15 @@ function nextPrev(n) {
 
 }
 
+let valid;
+
 function validateForm() {
     
     
     // This function deals with validation of the form fields
-    var y, i, valid = true;
+    var y, i;
+
+    valid = true;
 
     var x = document.getElementsByClassName('tabs');
     y = x[currentTab].getElementsByTagName("input");
@@ -250,14 +282,14 @@ function validateForm() {
         // If a field is empty...
       if (y[i].value == "") {
         
-        // add an "invalid" class to the field:
-        y[i].className += " invalid";
+        // // add an "invalid" class to the field:
+        // y[i].className += " invalid";
 
         // set page focus to invalid element
         y[i].focus();
 
         // test invalid input element
-        y[i].style.background = 'darkslategrey';
+        y[i].style.background = 'darkslategray';
 
         // and set the current valid status to false:
         valid = false;
@@ -271,6 +303,7 @@ function validateForm() {
     
     }
     
+    console.log(valid);
     return valid; // return the valid status
   }
   
@@ -335,9 +368,49 @@ setFormData = () => {
     calculation_tsp_type.innerHTML = transportation_type.value;
     calculation_tsp_cost.innerHTML = transportation_cost.value;
 
+    let layer_x00 = document.querySelector('#x00');
+    let layer_x01 = document.querySelector('#x01');
+    let layer_x02 = document.querySelector('#x02');
+
+    if (layer_x00.style.display != 'flex') {
+
+        layer_x00.style.display = 'flex';
+        
+        
+    }
+    if (layer_x01.style.display != 'flex') {
+
+        layer_x01.style.display = 'flex';
+        
+    }
+    if (layer_x02.style.display != 'flex') {
+
+        layer_x02.style.display = 'flex';
+        
+    }
+    else {
+        add.style.top = '50%';
+        add.style.left = '50%';
+        add.style.transform = 'translate(-50%, -50%)';
+    }
+    
+  
+
     let planner = document.querySelectorAll('.planner li');
 
     for (let i = 0; i < planner.length; i++) {
+
+        
+        
+
+
+
+        
+
+
+
+
+
 
         planner[0].style.background = 'darkblue';
         planner[0].style.border = '2px solid #FFF';
@@ -347,8 +420,93 @@ setFormData = () => {
         planner[i].style.color = 'darkblue';
         planner[i].style.border = '2px solid darkblue';
 
+        planner[0].innerHTML = '1';
         console.log('planner elements : ' + planner[i]);
+
+        if (planner[0].innerHTML == '1') {
+            planner[1].innerHTML = '2';
+        }
+        if (planner[0].innerHTML == '1' && planner[1].innerHTML == '2') {
+            planner[2].innerHTML = '3';
+        }
+
+        for (i = 0; i < lists.length; i++) {
+
+
+            lists[i].style.display = 'none';
+            
+            lists[0].id = 'x0';
+            lists[1].id = 'x1';
+            lists[2].id = 'x2';
+
+            let ul_x00 = document.querySelector('#ul-x00');
+            let ul_x01 = document.querySelector('#ul-x01');
+            let ul_x02 = document.querySelector('#ul-x02');
+
+            let layers = document.getElementsByClassName('layers');
+
+            for (i = 0; i < layers.length; i++) {
+                
+                
+                ul_x00.addEventListener('click', ()=> {
+
+                    layers[i].style.display = 'none';
+
+                    if (layers[0].style.display != 'flex') {
+                        layers[0].style.display = 'flex';
+                        layer_x00.style.display = 'flex';
+                    }
+                    
+    
+                }),
+    
+                ul_x01.addEventListener('click', ()=> {
+
+                    layers[1].style.display = 'flex';
+                    layer_x01.style.display = 'flex';
+    
+                }),
+    
+                ul_x02.addEventListener('click', ()=> {
+    
+                    layers[2].style.display = 'flex';
+                    layer_x02.style.display = 'flex';
+    
+                });
+    
+            }
+
+            
+
+           
+            
+            
+            view.addEventListener('click', ()=> {
+        
+                if (lists[0].style.display == 'none') {
+                    lists[0].style.display = 'flex';
+                }
+        
+            });
+        
+            // test
+            console.log('lists as : ' + lists)
+        
+        
+        
+        }
+        
     }
+
+    /*
+        validate for multiple lists
+
+        if list is active
+        create new list container
+
+    */
+
+  
 
 
     // test
@@ -474,3 +632,36 @@ validation = () => {
 
 }
 
+
+
+
+newList = () => {
+
+    let list_x00 = document.querySelector('#x00');
+    let list_x01 = document.querySelector('#x01');
+    let list_x02 = document.querySelector('#x02');
+
+    let x00_items = document.querySelector('#x00 .item');
+
+    let entry = {
+        'destination' : destination.value,
+        'destination-name' : destination_name.value,
+        'destination-type' : destination_type.value,
+
+        'accommodation' : accommodation.value,
+        'accommodation-time' : accommodation_time,
+        'accommodation-cost' : accommodation_cost,
+
+        'transportation' : transportation.value,
+        'transportation-type' : transportation_type.value,
+        'transportation-cost' : transportation_cost.value,
+    }
+
+    formData.push(entry);
+
+    // test
+    console.log(x00_items);
+
+}
+
+newList();
